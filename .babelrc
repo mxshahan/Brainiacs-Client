@@ -1,0 +1,34 @@
+{
+    "presets": [
+        "env",
+        "react",
+        "es2015",
+        "stage-0"
+    ],
+    "plugins": [
+        "transform-async-to-generator",
+        ["transform-runtime", {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": false }],
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        "syntax-dynamic-import",
+        "transform-object-assign",
+        ["module-resolver", {
+            "root": ["./src"],
+            "alias": {
+                "@config": "./config",
+                "@api": "./src/core/api",
+                "@mid": "./src/core/middlewares",
+                "@gen-com": "./src/core/components",
+                "@lib": "./src/core/lib",
+                "@store": "./src/core/store",
+                "@container": "./src/app/container",
+                "@routes": "./src/app/routes",
+                "@assets": "./src/app/assets",
+                "@styles": "./src/app/styles"
+            }
+        }]
+    ]
+}

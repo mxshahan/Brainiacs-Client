@@ -1,0 +1,52 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    background-color: #efefef
+}
+
+button{
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor: default;
+}
+
+a{
+    text-decoration: none
+}
+
+.card{
+    box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.02)
+}
+
+.form-label{
+    font-size: $xs-size !important;
+    color: $off-white !important
+}
+
+.form-control{
+    padding: 1px auto !important;
+    outline: 0px;
+    box-shadow: none;
+    font-size: $xs-size !important
+}
+
+
+
+// Buttons
+.btn-primary{
+    background-color: $purple !important;
+    border: 1px solid $primary !important
+}
+
+.btn-primary:focus{
+    outline: 0px;
+    box-shadow: none
+}
+
+// Text
+.text-primary{
+    color: $purple !important
+}
