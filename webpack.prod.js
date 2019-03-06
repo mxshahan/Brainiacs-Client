@@ -1,12 +1,10 @@
-const path = require('path');
 const webpack = require('webpack');
-const merge = require('webpack-merge');
 const CompressionPlugin = require('compression-webpack-plugin');
 const baseConfig = require('./webpack.config.js');
-const PUBLIC = path.resolve(__dirname, 'dist');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     ...baseConfig,
@@ -43,6 +41,14 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+
+        new HtmlWebpackPlugin({
+          files: {
+            js: [`${__dirname}/dist/bundle.js`]
+          },
+          title: 'Boilerplate',
+          template: `${__dirname}/public/index.html`
         }),
 
         // Minify CSS

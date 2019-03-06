@@ -52,4 +52,4 @@ export default class View extends React.Component {
 
 
 
-export const Login = View;
+export const Register = View;

@@ -1,23 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
 const src = path.resolve(__dirname, 'src');
-const build = path.resolve(__dirname, 'build');
+const dist = path.resolve(__dirname, 'dist');
 
 module.exports = {
     target: 'web',
-    entry: src + '/app.js',
+    entry: src + '/app/index.js',
     output: {
-        path: `${build}`,
+        path: `${dist}`,
         filename: 'bundle.js',
         publicPath: '/'
     },
     resolve: {
-        alias: {
-            "@api": path.join(src, 'core/api'),
-            "@mid": path.join(src, 'core/middlewares'),
-            "@gen-com": path.join(src, 'core/components'),
-            "@lib": path.join(src, 'core/lib'),
-        }
+        extensions: ['.js', '.jsx']
     },
     module: {
         rules: [{

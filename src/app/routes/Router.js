@@ -1,4 +1,4 @@
-import { Dashboard, Login, Home, ApiDoc, AccidentInfo } from "../components";
+import { Dashboard, Login, Home, ApiDoc, AccidentInfo, Register } from "../components";
 
 // Authorized Routes
 export const Private = [
@@ -7,7 +7,8 @@ export const Private = [
 
 // Login or Sign in Routes
 export const Auth = [
-  { path: '/login', exact: true, component: Login }
+  { path: '/login', exact: true, component: Login },
+  { path: '/register', exact: true, component: Register }
 ]
 
 // Public Routes
